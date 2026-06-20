@@ -1,0 +1,359 @@
+
+:root{
+    --pink:#ff5f9f;
+    --pink-light:#ffd5e8;
+    --glass:rgba(255,255,255,.08);
+    --border:rgba(255,255,255,.15);
+    --white:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:
+    radial-gradient(circle at top left,#ff8db4 0%,transparent 25%),
+    radial-gradient(circle at bottom right,#ff5f9f 0%,transparent 25%),
+    linear-gradient(
+        135deg,
+        #1d1327,
+        #43203f,
+        #7f3a65
+    );
+
+    min-height:100vh;
+    overflow-x:hidden;
+    color:white;
+}
+
+body::-webkit-scrollbar{
+    width:8px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background:#ff5f9f;
+    border-radius:30px;
+}
+
+.login-screen{
+
+    position:fixed;
+    inset:0;
+
+    background:
+    linear-gradient(
+        135deg,
+        #1a0f23,
+        #45224d
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:99999;
+}
+
+.login-box{
+
+    width:95%;
+    max-width:450px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:30px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:
+    0 0 50px rgba(0,0,0,.3);
+}
+
+.login-box h1{
+
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.login-box p{
+
+    opacity:.8;
+    margin-bottom:25px;
+}
+
+.login-box input{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    font-size:16px;
+
+    margin-bottom:15px;
+}
+
+.login-box button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:var(--pink);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+}
+
+.login-box button:hover{
+    transform:translateY(-2px);
+}
+
+#mainSite{
+    display:none;
+}
+
+.container{
+    width:min(1400px,95%);
+    margin:auto;
+}
+
+nav{
+
+    position:fixed;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:min(1200px,95%);
+
+    z-index:999;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 25px;
+
+    backdrop-filter:blur(15px);
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:25px;
+}
+
+.logo{
+
+    font-size:22px;
+    font-weight:700;
+}
+
+.menu{
+
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.menu a{
+
+    color:white;
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#ffd5e8;
+}
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    position:relative;
+}
+
+.hero-content{
+
+    max-width:900px;
+
+    padding:20px;
+}
+
+.hero h1{
+
+    font-size:70px;
+    margin-bottom:15px;
+}
+
+.hero p{
+
+    font-size:20px;
+    opacity:.9;
+}
+
+.relationship-date{
+
+    margin-top:20px;
+    font-size:22px;
+}
+
+.days-counter{
+
+    font-size:65px;
+    font-weight:700;
+
+    margin-top:20px;
+
+    color:#ffd5e8;
+}
+
+.quote-box{
+
+    margin-top:30px;
+
+    display:inline-block;
+
+    padding:20px 30px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.12);
+}
+
+.section{
+
+    padding:120px 0;
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:50px;
+}
+
+.glass{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+}
+
+.hearts{
+
+    position:fixed;
+    inset:0;
+
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.heart{
+
+    position:absolute;
+
+    bottom:-50px;
+
+    font-size:24px;
+
+    animation:floatHeart linear forwards;
+}
+
+@keyframes floatHeart{
+
+    from{
+        transform:
+        translateY(0)
+        rotate(0deg);
+    }
+
+    to{
+
+        transform:
+        translateY(-120vh)
+        rotate(360deg);
+
+        opacity:0;
+    }
+}
+
+.scroll-down{
+
+    margin-top:40px;
+}
+
+.scroll-down a{
+
+    color:white;
+    text-decoration:none;
+
+    padding:15px 25px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.08);
+}
+
+@media(max-width:900px){
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .days-counter{
+        font-size:40px;
+    }
+
+    .menu{
+        display:none;
+    }
+}

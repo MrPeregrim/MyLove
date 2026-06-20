@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>❤️ Наша История Любви ❤️</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <div class="hearts" id="hearts"></div>
+    
+    <div class="login-screen" id="loginScreen">
+        
+        <div class="login-box">
+            
+            <h1>❤️ Только для нас ❤️</h1>
+            
+            <p>
+                Введите общий пароль
+            </p>
+            
+            <input
+            type="password"
+            id="passwordInput"
+            placeholder="Пароль"
+            >
+            
+            <button onclick="login()">
+                Войти ❤️
+            </button>
+            
+        </div>
+        
+    </div>
+    
+    <div id="mainSite">
+        
+        <nav>
+            
+            <div class="logo">
+                ❤️ Мы
+            </div>
+            
+            <div class="menu">
+                
+                <a href="#home">Главная</a>
+                
+                <a href="#gallery">Фотоальбом</a>
+                
+                <a href="#poems">Стихи</a>
+                
+                <a href="#reasons">100 причин</a>
+                
+                <a href="#notes">Записки</a>
+                
+                <a href="#roses">Розы</a>
+                
+            </div>
+            
+        </nav>
+        
+        <section class="hero" id="home">
+            
+            <div class="hero-content">
+                
+                <h1>
+                    Наша история любви ❤️
+                </h1>
+                
+                <p>
+                    Каждый день рядом с тобой —
+                    лучший день моей жизни
+                </p>
+                
+                <div class="relationship-date">
+                    Вместе с 17 мая 2026
+                </div>
+                
+                <div
+                class="days-counter"
+                id="daysTogether">
+                0
+            </div>
+            
+            <div class="quote-box">
+                
+                <span id="quoteOfDay">
+                    
+                </span>
+                
+            </div>
+            
+            <div class="scroll-down">
+                
+                <a href="#gallery">
+                    Смотреть нашу историю ↓
+                </a>
+                
+            </div>
+            
+        </div>
+        
+    </section>
+    
+    <!-- ========================= -->
+    <!-- ФОТОАЛЬБОМ -->
+    <!-- ========================= -->
+    
+    <section
+    class="section"
+    id="gallery">
+    
+    <h2 class="section-title">
+        📸 Наш Фотоальбом
+    </h2>
+    
+    <div
+    class="glass"
+    style="
+    padding:30px;
+    margin-bottom:30px;
+    ">
+    
+    <h3>
+        Загрузить фотографию ❤️
+    </h3>
+    
+    <br>
+    
+    <input
+    type="file"
+    id="photoUpload"
+    accept="image/*"
+    multiple
+    >
+    
+    <p style="
+    margin-top:15px;
+    opacity:.8;
+    ">
+    
+    Фотографии доступны только нам
+    
+</p>
+
+</div>
+
+<div
+id="galleryGrid"
+style="
+display:grid;
+grid-template-columns:
+repeat(auto-fill,minmax(260px,1fr));
+gap:20px;
+">
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- СТИХИ -->
+<!-- ========================= -->
+
+<section
+class="section"
+id="poems">
+
+<h2 class="section-title">
+    📖 Книга стихов
+</h2>
+
+<div
+class="glass"
+style="
+padding:30px;
+margin-bottom:25px;
+">
+
+<input
+
+type="text"
+
+id="poemSearch"
+
+placeholder="Поиск стихов..."
+
+style="
+width:100%;
+padding:16px;
+border:none;
+border-radius:15px;
+font-size:16px;
+">
+
+</div>
+
+<div
+class="glass"
+style="
+padding:30px;
+margin-bottom:25px;
+">
+
+<h3>
+    Добавить новое стихотворение
+</h3>
+
+<br>
+
+<input
+
+type="text"
+
+id="poemTitle"
+
+placeholder="Название"
+
+style="
+width:100%;
+padding:15px;
+border:none;
+border-radius:15px;
+margin-bottom:15px;
+">
+
+<textarea
+
+id="poemText"
+
+placeholder="Напиши стих..."
+
+style="
+width:100%;
+min-height:200px;
+border:none;
+border-radius:15px;
+padding:20px;
+resize:vertical;
+"></textarea>
+
+<br><br>
+
+<button
+id="savePoemBtn"
+style="
+padding:15px 25px;
+border:none;
+border-radius:15px;
+background:#ff5f9f;
+color:white;
+cursor:pointer;
+">
+
+Сохранить ❤️
+
+</button>
+
+</div>
+
+<div
+id="poemsContainer"
+style="
+display:grid;
+grid-template-columns:
+repeat(auto-fill,minmax(350px,1fr));
+gap:20px;
+">
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- 100 ПРИЧИН -->
+<!-- ========================= -->
+
+<section
+class="section"
+id="reasons">
+
+<h2 class="section-title">
+    💌 100 причин почему я люблю Аню
+</h2>
+
+<div
+class="glass"
+style="
+padding:30px;
+text-align:center;
+margin-bottom:30px;
+">
+
+<div
+style="
+font-size:70px;
+font-weight:700;
+color:#ffd5e8;
+">
+
+<span id="reasonsCount">
+    0
+</span>
+
+/100
+
+</div>
+
+<p>
+    Каждая причина — часть нашей истории ❤️
+</p>
+
+</div>
+
+<div
+class="glass"
+style="
+padding:30px;
+margin-bottom:25px;
+">
+
+<h3>
+    Добавить новую причину
+</h3>
+
+<br>
+
+<textarea
+
+id="reasonText"
+
+placeholder="Например: Потому что твоя улыбка делает меня счастливым"
+
+style="
+width:100%;
+min-height:120px;
+border:none;
+border-radius:15px;
+padding:15px;
+"></textarea>
+
+<br><br>
+
+<button
+id="addReasonBtn"
+style="
+padding:15px 25px;
+border:none;
+border-radius:15px;
+background:#ff5f9f;
+color:white;
+cursor:pointer;
+">
+
+Добавить ❤️
+
+</button>
+
+</div>
+
+<div
+id="reasonsGrid"
+
+style="
+display:grid;
+grid-template-columns:
+repeat(auto-fill,minmax(280px,1fr));
+gap:20px;
+">
+
+<div
+class="glass"
+style="
+padding:25px;
+">
+
+Потому что твоя улыбка
+делает меня счастливым ❤️
+
+</div>
+
+<div
+class="glass"
+style="
+padding:25px;
+">
+
+Потому что рядом
+с тобой спокойно ❤️
+
+</div>
+
+<div
+class="glass"
+style="
+padding:25px;
+">
+
+Потому что ты умеешь
+поддержать ❤️
+
+</div>
+
+<div
+class="glass"
+style="
+padding:25px;
+">
+
+Потому что с тобой
+я настоящий ❤️
+
+</div>
+
+<div
+class="glass"
+style="
+padding:25px;
+">
+
+Потому что ты —
+мой дом ❤️
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ДАЛЕЕ БУДЕТ:
+ФОТОАЛЬБОМ
+КНИГА СТИХОВ
+100 ПРИЧИН
+ЗАПИСКИ
+РОЗЫ
+-->
+
+<div class="container">
+    
+    <!-- ========================= -->
+    <!-- ЗАПИСКИ -->
+    <!-- ========================= -->
+    
+    <section
+    class="section"
+    id="notes">
+    
+    <h2 class="section-title">
+        📝 Записки друг другу
+    </h2>
+    
+    <div
+    class="glass"
+    style="
+    padding:30px;
+    margin-bottom:30px;
+    ">
+    
+    <textarea
+    
+    id="noteText"
+    
+    placeholder="Напиши что-нибудь для Ани ❤️"
+    
+    style="
+    width:100%;
+    min-height:180px;
+    border:none;
+    border-radius:15px;
+    padding:20px;
+    resize:vertical;
+    "></textarea>
+    
+    <br><br>
+    
+    <button
+    id="sendNoteBtn"
+    style="
+    padding:15px 30px;
+    border:none;
+    border-radius:15px;
+    background:#ff5f9f;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    ">
+    
+    Отправить ❤️
+    
+</button>
+
+</div>
+
+<div
+id="notesContainer"
+
+style="
+display:grid;
+grid-template-columns:
+repeat(auto-fill,minmax(320px,1fr));
+gap:20px;
+">
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- РОЗЫ -->
+<!-- ========================= -->
+
+<section
+class="section"
+id="roses">
+
+<h2 class="section-title">
+    🌹 Подарить розы
+</h2>
+
+<div
+class="glass"
+style="
+padding:40px;
+text-align:center;
+">
+
+<div
+style="
+font-size:90px;
+margin-bottom:20px;
+">
+
+🌹
+
+</div>
+
+<h3>
+    
+    Подарено роз
+    
+</h3>
+
+<div
+
+id="rosesCounter"
+
+style="
+font-size:80px;
+font-weight:700;
+color:#ffd5e8;
+margin:20px 0;
+">
+
+0
+
+</div>
+
+<button
+
+id="giveRoseBtn"
+
+style="
+padding:18px 40px;
+border:none;
+border-radius:20px;
+background:#ff5f9f;
+color:white;
+cursor:pointer;
+font-size:18px;
+">
+
+🌹 Подарить розу
+
+</button>
+
+<p
+style="
+margin-top:20px;
+opacity:.8;
+">
+
+Каждая роза хранится в нашей истории любви ❤️
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- МОДАЛЬНОЕ ОКНО ФОТО -->
+<!-- ========================= -->
+
+<div
+id="photoModal"
+
+style="
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.9);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:999999;
+">
+
+<span
+
+id="closeModal"
+
+style="
+position:absolute;
+top:30px;
+right:40px;
+font-size:45px;
+cursor:pointer;
+color:white;
+">
+
+×
+
+</span>
+
+<img
+
+id="modalImage"
+
+style="
+max-width:90%;
+max-height:90%;
+border-radius:20px;
+box-shadow:0 0 50px rgba(255,255,255,.15);
+">
+
+</div>
+
+<!-- ========================= -->
+<!-- АНИМАЦИЯ ЛЕПЕСТКОВ -->
+<!-- ========================= -->
+
+<div id="petalsContainer"></div>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer
+
+style="
+padding:80px 20px;
+text-align:center;
+">
+
+<div
+class="glass"
+
+style="
+max-width:900px;
+margin:auto;
+padding:40px;
+">
+
+<h2
+style="
+margin-bottom:20px;
+">
+
+❤️ Наша история продолжается ❤️
+
+</h2>
+
+<p
+style="
+opacity:.9;
+line-height:1.8;
+">
+
+Каждый день рядом с тобой —
+это ещё одна прекрасная страница
+нашей книги любви.
+
+</p>
+
+<br>
+
+<div
+style="
+font-size:22px;
+">
+
+17 мая 2026 — ♾️
+
+</div>
+
+</div>
+
+</footer>
+
+</div>
+<!-- конец container -->
+
+</div>
+<!-- конец mainSite -->
+
+<script type="module">
+    
+    /* =====================================
+    НАСТРОЙКИ
+    ===================================== */
+    
+    const PASSWORD = "ANNA2026";
+    
+    /* =====================================
+    АВТОРИЗАЦИЯ
+    ===================================== */
+    
+    window.login = function(){
+        
+        const pass =
+        document.getElementById(
+        "passwordInput"
+        ).value;
+        
+        if(pass === PASSWORD){
+            
+            document.getElementById(
+            "loginScreen"
+            ).style.display = "none";
+            
+            document.getElementById(
+            "mainSite"
+            ).style.display = "block";
+            
+            localStorage.setItem(
+            "love_access",
+            "true"
+            );
+            
+        }else{
+            
+            alert(
+            "Неверный пароль ❤️"
+            );
+        }
+    }
+    
+    if(
+    localStorage.getItem(
+    "love_access"
+    ) === "true"
+    ){
+        
+        document.getElementById(
+        "loginScreen"
+        ).style.display = "none";
+        
+        document.getElementById(
+        "mainSite"
+        ).style.display = "block";
+    }
+    
+    /* =====================================
+    ДНИ ВМЕСТЕ
+    ===================================== */
+    
+    const startDate =
+    new Date("2026-05-17");
+    
+    function updateDays(){
+        
+        const now =
+        new Date();
+        
+        const diff =
+        now - startDate;
+        
+        const days =
+        Math.floor(
+        diff / 86400000
+        );
+        
+        document.getElementById(
+        "daysTogether"
+        ).innerText =
+        days + " дней";
+    }
+    
+    updateDays();
+    
+    /* =====================================
+    ФРАЗЫ ДНЯ
+    ===================================== */
+    
+    const quotes = [
+    
+"Ты — лучшее, что случилось со мной ❤️",
+    
+"Любовь начинается с улыбки ❤️",
+    
+"С тобой каждый день особенный ❤️",
+    
+"Ты мой дом ❤️",
+    
+"С тобой я настоящий ❤️",
+    
+"Ты моё счастье ❤️",
+    
+"Я выбираю тебя каждый день ❤️",
+    
+"Мы — моя любимая история ❤️"
+    
+    ];
+    
+    document.getElementById(
+    "quoteOfDay"
+    ).innerText =
+    quotes[
+    Math.floor(
+    Math.random() *
+    quotes.length
+    )];
+    
+    /* =====================================
+    СЕРДЕЧКИ
+    ===================================== */
+    
+    function createHeart(){
+        
+        const heart =
+        document.createElement(
+        "div"
+        );
+        
+        heart.className =
+        "heart";
+        
+        heart.innerHTML = "❤️";
+        
+        heart.style.left =
+        Math.random()*100+"vw";
+        
+        heart.style.fontSize =
+        (16+Math.random()*25)
+        +"px";
+        
+        heart.style.animationDuration =
+        (6+Math.random()*8)
+        +"s";
+        
+        document
+        .getElementById("hearts")
+        .appendChild(heart);
+        
+        setTimeout(()=>{
+            heart.remove();
+        },15000);
+    }
+    
+    setInterval(
+    createHeart,
+    900
+    );
+    
+    /* =====================================
+    РОЗЫ
+    ===================================== */
+    
+    let roses =
+    Number(
+    localStorage.getItem(
+"roses"
+    ) || 0);
+    
+    updateRoseCounter();
+    
+    function updateRoseCounter(){
+        
+        const el =
+        document.getElementById(
+        "rosesCounter"
+        );
+        
+        if(el)
+        el.innerText =
+        roses;
+    }
+    
+    document
+    .getElementById(
+"giveRoseBtn"
+    )
+    .addEventListener(
+"click",
+    ()=>{
+        
+        roses++;
+        
+        localStorage.setItem(
+        "roses",
+        roses
+        );
+        
+        updateRoseCounter();
+        
+        createPetals();
+        
+    }
+    );
+    
+    function createPetals(){
+        
+        for(
+        let i=0;
+        i<30;
+        i++
+        ){
+            
+            const petal =
+            document.createElement(
+            "div"
+            );
+            
+            petal.innerHTML =
+            "🌹";
+            
+            petal.style.position =
+            "fixed";
+            
+            petal.style.left =
+            Math.random()*100+"vw";
+            
+            petal.style.top =
+            "-50px";
+            
+            petal.style.fontSize =
+            "30px";
+            
+            petal.style.zIndex =
+            "99999";
+            
+            petal.style.transition =
+            "all 6s linear";
+            
+            document.body
+            .appendChild(
+            petal
+            );
+            
+            setTimeout(()=>{
+                
+                petal.style.transform =
+                "translateY(120vh) rotate(720deg)";
+                
+                petal.style.opacity =
+                "0";
+                
+            },50);
+            
+            setTimeout(()=>{
+                petal.remove();
+            },6000);
+        }
+    }
+    
+    /* =====================================
+    ПРИЧИНЫ ЛЮБВИ
+    ===================================== */
+    
+    const reasonsGrid =
+    document.getElementById(
+"reasonsGrid"
+    );
+    
+    const reasonBtn =
+    document.getElementById(
+"addReasonBtn"
+    );
+    
+    const reasonsCount =
+    document.getElementById(
+"reasonsCount"
+    );
+    
+    let reasons =
+    JSON.parse(
+    localStorage.getItem(
+"reasons"
+    ) || "[]"
+    );
+    
+    function renderReasons(){
+        
+        reasonsCount.innerText =
+        reasons.length;
+        
+        reasons.forEach(
+        reason=>{
+            
+            const card =
+            document.createElement(
+            "div"
+            );
+            
+            card.className =
+            "glass";
+            
+            card.style.padding =
+            "25px";
+            
+            card.innerHTML =
+            reason;
+            
+            reasonsGrid
+            .appendChild(
+            card
+            );
+        });
+    }
+    
+    renderReasons();
+    
+    reasonBtn.addEventListener(
+"click",
+    ()=>{
+        
+        const text =
+        document.getElementById(
+        "reasonText"
+        ).value.trim();
+        
+        if(!text) return;
+        
+        reasons.push(text);
+        
+        localStorage.setItem(
+        "reasons",
+        JSON.stringify(
+        reasons
+        )
+        );
+        
+        location.reload();
+    }
+    );
+    
+    /* =====================================
+    ЗАПИСКИ
+    ===================================== */
+    
+    const notesContainer =
+    document.getElementById(
+"notesContainer"
+    );
+    
+    let notes =
+    JSON.parse(
+    localStorage.getItem(
+"notes"
+    ) || "[]"
+    );
+    
+    function renderNotes(){
+        
+        notes.forEach(
+        note=>{
+            
+            const card =
+            document.createElement(
+            "div"
+            );
+            
+            card.className =
+            "glass";
+            
+            card.style.padding =
+            "25px";
+            
+            card.innerHTML =
+            note;
+            
+            notesContainer
+            .appendChild(
+            card
+            );
+        });
+    }
+    
+    renderNotes();
+    
+    document
+    .getElementById(
+"sendNoteBtn"
+    )
+    .addEventListener(
+"click",
+    ()=>{
+        
+        const text =
+        document
+        .getElementById(
+        "noteText"
+        ).value.trim();
+        
+        if(!text)
+        return;
+        
+        notes.push(text);
+        
+        localStorage.setItem(
+        "notes",
+        JSON.stringify(
+        notes
+        )
+        );
+        
+        location.reload();
+    }
+    );
+    
+    /* =====================================
+    СТИХИ
+    ===================================== */
+    
+    const poemsContainer =
+    document.getElementById(
+"poemsContainer"
+    );
+    
+    let poems =
+    JSON.parse(
+    localStorage.getItem(
+"poems"
+    ) || "[]"
+    );
+    
+    function renderPoems(){
+        
+        poemsContainer.innerHTML="";
+        
+        poems.forEach(
+        poem=>{
+            
+            const card =
+            document.createElement(
+            "div"
+            );
+            
+            card.className =
+            "glass";
+            
+            card.style.padding =
+            "25px";
+            
+            card.innerHTML =
+            
+            "<h3>"+poem.title+
+                "</h3><br><p>"+
+                    poem.text+
+                    "</p>";
+                    
+                    poemsContainer
+                    .appendChild(
+                    card
+                    );
+                });
+            }
+            
+            renderPoems();
+            
+            document
+            .getElementById(
+"savePoemBtn"
+            )
+            .addEventListener(
+"click",
+            ()=>{
+                
+                const title =
+                document
+                .getElementById(
+                "poemTitle"
+                ).value;
+                
+                const text =
+                document
+                .getElementById(
+                "poemText"
+                ).value;
+                
+                if(
+                !title ||
+                !text
+                ) return;
+                
+                poems.push({
+                    title,
+                    text
+                });
+                
+                localStorage.setItem(
+                "poems",
+                JSON.stringify(
+                poems
+                )
+                );
+                
+                location.reload();
+            }
+            );
+            
+            /* =====================================
+            ПОИСК СТИХОВ
+            ===================================== */
+            
+            document
+            .getElementById(
+"poemSearch"
+            )
+            .addEventListener(
+"input",
+            e=>{
+                
+                const value =
+                e.target.value
+                .toLowerCase();
+                
+                document
+                .querySelectorAll(
+"#poemsContainer .glass"
+                )
+                .forEach(card=>{
+                    
+                    card.style.display =
+                    card.innerText
+                    .toLowerCase()
+                    .includes(value)
+                    
+                    ? "block"
+                    : "none";
+                });
+            });
+            
+            /* =====================================
+            ГАЛЕРЕЯ
+            ===================================== */
+            
+            const upload =
+            document.getElementById(
+"photoUpload"
+            );
+            
+            const gallery =
+            document.getElementById(
+"galleryGrid"
+            );
+            
+            gallery.innerHTML =
+            localStorage.getItem(
+"gallery"
+            ) || "";
+            
+            upload.addEventListener(
+"change",
+            e=>{
+                
+                [...e.target.files]
+                .forEach(file=>{
+                    
+                    const reader =
+                    new FileReader();
+                    
+                    reader.onload =
+                    function(ev){
+                        
+                        const img =
+                        document.createElement(
+"img"
+                        );
+                        
+                        img.src =
+                        ev.target.result;
+                        
+                        img.style.width =
+"100%";
+                        
+                        img.style.height =
+"350px";
+                        
+                        img.style.objectFit =
+"cover";
+                        
+                        img.style.borderRadius =
+"20px";
+                        
+                        img.style.cursor =
+"pointer";
+                        
+                        gallery.appendChild(
+                        img
+                        );
+                        
+                        localStorage.setItem(
+"gallery",
+                        gallery.innerHTML
+                        );
+                        
+                        bindGallery();
+                    };
+                    
+                    reader.readAsDataURL(
+                    file
+                    );
+                    
+                });
+            });
+            
+            /* =====================================
+            МОДАЛЬНОЕ ФОТО
+            ===================================== */
+            
+            function bindGallery(){
+                
+                document
+                .querySelectorAll(
+"#galleryGrid img"
+                )
+                .forEach(img=>{
+                    
+                    img.onclick=()=>{
+                        
+                        document
+                        .getElementById(
+"photoModal"
+                        )
+                        .style.display="flex";
+                        
+                        document
+                        .getElementById(
+"modalImage"
+                        )
+                        .src=img.src;
+                        
+                    };
+                });
+            }
+            
+            bindGallery();
+            
+            document
+            .getElementById(
+"closeModal"
+            )
+            .onclick=()=>{
+                
+                document
+                .getElementById(
+"photoModal"
+                )
+                .style.display="none";
+            };
+            
+            /* =====================================
+            FIREBASE
+            ===================================== */
+            
+            /*
+            ЗАМЕНИ НА СВОИ ДАННЫЕ:
+            
+            import { initializeApp }
+            from "firebase-app.js";
+            
+            const firebaseConfig = {
+            
+            apiKey:"",
+            
+            authDomain:"",
+            
+            projectId:"",
+            
+            storageBucket:"",
+            
+            messagingSenderId:"",
+            
+            appId:""
+            
+            };
+            
+            initializeApp(
+            firebaseConfig
+            );
+            
+            */
+            
+        </script>
+        
+    </body>
+    </html>
